@@ -1,0 +1,184 @@
+:root {
+    --accent: #FFD700;
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --text: #000000;
+    --muted: #000000;
+    --action: #FF3300;
+    --border: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    background-color: #F0F0F0;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.player-core {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid var(--border);
+    background: var(--bg);
+    box-shadow: 10px 10px 0px var(--border);
+}
+
+.outer-frame {
+    padding: 30px;
+}
+
+.display-section {
+    margin-bottom: 30px;
+}
+
+.station-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo-container {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #EEE;
+    margin: 0 auto;
+}
+
+.station-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.station-logo.is-icon {
+    object-fit: contain;
+}
+
+.station-logo.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+#status {
+    font-size: 0.8rem;
+    font-weight: 800;
+    background: var(--accent);
+    color: var(--text);
+    display: inline-block;
+    padding: 2px 8px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+#status.buffering { background: #FFA500; } /* Orange */
+#status.halted { background: #FF4500; color: white; } /* Red-Orange */
+#status.active { background: #00FF00; } /* Green */
+#status.error { background: #FF0000; color: white; } /* Pure Red */
+#status.standby { background: #DDD; } /* Grey */
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 2px solid var(--border);
+    margin-bottom: 30px;
+}
+
+.btn-tactile {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.1s;
+    text-transform: uppercase;
+}
+
+.btn-tactile:hover {
+    background: #EEE;
+}
+
+.btn-tactile:active {
+    background: var(--accent);
+}
+
+.btn-play {
+    grid-column: span 2;
+    background: var(--accent);
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.input-area {
+    display: flex;
+    border: 2px solid var(--border);
+    margin-bottom: 30px;
+}
+
+#streamInput {
+    flex-grow: 1;
+    background: var(--bg);
+    color: var(--text);
+    border: none;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+    outline: none;
+}
+
+#addBtn {
+    border: none;
+    border-left: 2px solid var(--border);
+    padding: 0 20px;
+}
+
+.vol-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vol-control label {
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+input[type="range"] {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    background: var(--border);
+    height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--accent);
+    border: 2px solid var(--border);
+    cursor: pointer;
+}

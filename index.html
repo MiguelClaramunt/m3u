@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STREAM / NTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="player-core">
+        <div class="outer-frame">
+            <header class="display-section">
+                <div class="station-info">
+                    <div class="logo-container">
+                        <img id="stationLogo" src="" alt="" class="station-logo hidden">
+                    </div>
+                    <h1 id="stationName">---</h1>
+                    <p id="status">INIT...</p>
+                </div>
+            </header>
+
+            <section class="controls-area">
+                <div class="controls-grid">
+                    <button id="prevBtn" class="btn-tactile">PREV</button>
+                    <button id="nextBtn" class="btn-tactile">NEXT</button>
+                    <button id="playBtn" class="btn-tactile btn-play">PLAY</button>
+                    <button id="stopBtn" class="btn-tactile">STOP</button>
+                    <button id="retryBtn" class="btn-tactile">RETRY</button>
+                </div>
+                
+                <div class="input-area">
+                    <input type="text" id="streamInput" placeholder="PASTE M3U URL OR URL">
+                    <button id="addBtn" class="btn-tactile">ADD</button>
+                </div>
+
+                <div class="vol-control">
+                    <label>GAIN</label>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </section>
+        </div>
+
+        <audio id="audioPlayer"></audio>
+    </main>
+
+    <script src="stations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

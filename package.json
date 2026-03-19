@@ -1,0 +1,13 @@
+{
+  "name": "m3u-radio",
+  "version": "1.0.0",
+  "description": "NTS Radio Player",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
